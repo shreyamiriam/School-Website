@@ -39,7 +39,7 @@ function About() {
     <>
     <div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
-    className='text-4xl uppercase mb-2'><b>About us</b>
+    className='text-4xl uppercase mb-2'><b>About Us</b>
     </h1>
   
     <h1

@@ -5,7 +5,17 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Button from '@mui/material/Button';
+import NavigationOutlinedIcon from '@mui/icons-material/NavigationOutlined';
+
 function Footer() {
+
+    // Function to scroll to the top of the page
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling behavior
+      });
+    };
   return (
     <>
    <div className=' bg-slate-500 w-full' style={{backgroundImage:'url("https://i.pngimg.me/thumb/f/720/comrawpixel5990802.jpg")',backgroundSize:"cover"}}>
@@ -63,7 +73,18 @@ function Footer() {
                 </ul>
               </div>
         </div>
-        <div className='w-full bg-sky-800 h-24'>
+        <div className='w-full bg-sky-800 h-24 flex flex-wrap items-center justify-around text-white font-semibold'>
+      <div><p> 2023 Rainbow - All Rights Reserved.</p></div>
+      <div className='flex gap-6 items-center'>
+        <div>
+          <p>Terms & Conditions Privacy Policy</p>
+        </div>
+        <div>
+          <button className='w-12 h-10 rounded-lg bg-blue-500' style={{marginLeft:"60px"}} onClick={scrollToTop}>
+          <NavigationOutlinedIcon/>
+          </button>
+        </div>
+      </div>
         </div>
    </div>
     </>
