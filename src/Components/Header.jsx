@@ -53,10 +53,10 @@ function Header() {
             <a href="/about">About</a>
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            Services
+          <a href="/events">News and Events</a>
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
-            Gallery
+          <a href="/gallery">Gallery</a>
           </li>
           <li className='mx-4 my-6 md:my-0 text-xl hover:text-cyan-300 duration-500'>
             <a href="/contact">Contact Us</a>

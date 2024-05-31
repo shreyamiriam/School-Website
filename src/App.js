@@ -5,6 +5,8 @@ import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import Gallery from "./Pages/Gallery";
+import Newsevents from "./Pages/Newsevents";
 import Rating from "./Components/Rating";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,9 +17,12 @@ function App() {
     <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/events" element={<Newsevents/>}/>
+        
+        <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/rating" element={<Rating/>}/>
+        <Route path="/contact" element={<Contact/>}/>
 
 
 

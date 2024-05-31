@@ -12,8 +12,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Rating from '../Components/Rating';
 // import Button from '@mui/material/Button';
-
-
+import { Autoplay } from 'swiper/modules';
 
 
 
@@ -23,6 +22,18 @@ function About() {
     triggerOnce: true,
     threshold: .5,
   });
+
+  const ratingData = [
+    { rating: 5, review: 'Great service!', user: 'User 1', location: 'Germany', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 4, review: 'Very satisfied!', user: 'User 2', location: 'USA', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 3, review: 'Good experience.', user: 'User 3', location: 'UK', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 5, review: 'Excellent!', user: 'User 4', location: 'France', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 4, review: 'Very good!', user: 'User 5', location: 'Italy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 3, review: 'Satisfied.', user: 'User 6', location: 'Spain', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 5, review: 'Highly recommended!', user: 'User 7', location: 'Netherlands', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+    { rating: 4, review: 'Good job!', user: 'User 8', location: 'Belgium', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+  ];
+
   
   return (
     <>
@@ -56,15 +67,6 @@ function About() {
     />
      </div>
   </div>
-
-
-
-
-
-
-
-
-
 
   <div 
       ref={ref} 
@@ -149,41 +151,43 @@ function About() {
 <div>
   <p className='uppercase text-center text-orange-400'style={{fontWeight:"bold"}}>testimonial</p>
   <h1 className='text-center capitalize text-4xl '>parents are saying</h1>
-   <Swiper
-       modules={[Pagination]}
-       spaceBetween={50}
-       pagination={{ clickable: true }}
-       breakpoints={{
-         320: {
-           slidesPerView: 1,
-           spaceBetween: 20,
-         },
-         640: {
-           slidesPerView: 1,
-           spaceBetween: 20,
-         },
-         768: {
-           slidesPerView: 2,
-           spaceBetween: 40,
-         },
-         1024: {
-           slidesPerView: 3,
-           spaceBetween: 50,
-         },
-       }}
+  <Swiper
+      modules={[Autoplay]}
+      spaceBetween={50}
+      autoplay={{ delay: 2000 }}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      
     >
-       <SwiperSlide><Rating/></SwiperSlide>
-   
-      <SwiperSlide><Rating/></SwiperSlide>
-          
-      <SwiperSlide><Rating/></SwiperSlide>
-  
-      <SwiperSlide><Rating/></SwiperSlide>
-  
-   </Swiper>
+      {ratingData.map((data, index) => (
+        <SwiperSlide key={index}>
+          <Rating
+            rating={data.rating}
+            review={data.review}
+            user={data.user}
+            location={data.location}
+            image={data.image}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
 </div>
 
 <div style={{backgroundColor:"#95c535"}} className='w-full text-center text-white mt-10 p-8 sm:p-16'>

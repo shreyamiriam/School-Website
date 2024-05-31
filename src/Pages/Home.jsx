@@ -11,6 +11,10 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
+import Card2 from '../Components/Card2';
+import Rating from '../Components/Rating';
+import { Autoplay } from 'swiper/modules';
+
 
 
 function Home() {
@@ -19,6 +23,17 @@ function Home() {
         triggerOnce: true,
         threshold: .5,
       });
+
+      const ratingData = [
+        { rating: 5, review: 'Great service!', user: 'User 1', location: 'Germany', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 4, review: 'Very satisfied!', user: 'User 2', location: 'USA', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 3, review: 'Good experience.', user: 'User 3', location: 'UK', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 5, review: 'Excellent!', user: 'User 4', location: 'France', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 4, review: 'Very good!', user: 'User 5', location: 'Italy', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 3, review: 'Satisfied.', user: 'User 6', location: 'Spain', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 5, review: 'Highly recommended!', user: 'User 7', location: 'Netherlands', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+        { rating: 4, review: 'Good job!', user: 'User 8', location: 'Belgium', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmHWOrhVKm7uFEO5hu3PkWEes7agIDe2gbA&s' },
+      ];
 
   return (
   <div> 
@@ -59,19 +74,23 @@ function Home() {
      </div>
 
       <div className='md:w-1/2 p-5 text-center col'>
-        <h1 className='pt-10 pb-10'>About Our KidsAcademy</h1>
+        <h1 className='pt-10 pb-8 text-4xl  text-[#404040] font-semibold'>About Our KidsAcademy</h1>
         <p className='text-justify'>Hello Kids Maruthankuzhi is a renowned Montessori-based educational school, where children can experience the joy of learning. Our classrooms and equipment are designed to make children curious, independent, and love discovering new things. We have qualified teachers who create a supportive and interesting environment. They help children feel confident and think critically. We understand that every child develops at their own pace , so we allow them to learn at their own speed. Our education focuses on academics, social and emotional development, and practical life skills. We believe in keeping strong communication with parents and involving them in their child's education. Our campus is colourful, safe, and exciting for children to explore and learn. We provide age-appropriate materials, outdoor play areas, and activities that match each child's interests and needs. Come and see how Montessori education at Hello Kids Maruthankuzhi Montessori School can transform your child's future.</p>
       </div>
   </div>
 
  
-  <div>
+  <div className='p-14'>
+  <div className='flex flex-col justify-center items-center'>
+    <h1 className=' text-center sm:text-left text-1xl pb-5 text-green-400'>ON GOING CLASSES</h1>
+    <h1 className=' text-center sm:text-left text-3xl pb-5 text-[#404040] font-semibold'style={{fontSize:'33px'}}>Popular Classes</h1>
+    </div>
   <Card/>
 </div>
 
 
 
-  <div className='flex flex-wrap w-full'>
+  {/* <div className='flex flex-wrap w-full'>
     <div className=' lg:w-1/4   p-5'>
         <h1 className='text-center pb-9'>Active Learning</h1>
         <p className='text-center'>At Hello Kids Montessori, we believe in promoting active learning through entertaining and interactive activities, enabling children to actively learn , discover, and form meaningful connections with the world around them.</p>
@@ -92,10 +111,10 @@ function Home() {
         <p className='text-center'>At Hello Kids Montessori, we believe in promoting active learning through entertaining and interactive activities, enabling children to actively learn , discover, and form meaningful connections with the world around them.</p>
     </div>
 
-  </div>
+  </div> */}
 
   
-<div className=''>
+{/* <div className=''>
     <h1 className='text-center tex'>Our Popular Classes</h1>
       <div className='flex flex-wrap w-full '>
         
@@ -138,8 +157,8 @@ function Home() {
     
       </div>
     
-</div>
-
+</div> */}
+{/* 
  <div>
     <h1 className='text-center text-5xl pt-5'>What Parents Say</h1>
      <Swiper
@@ -186,9 +205,13 @@ function Home() {
         </SwiperSlide>
     
      </Swiper>
- </div>
+ </div> */}
 
- <div 
+
+ 
+
+
+  <div 
       ref={ref} 
       className='w-full shadow-inner p-10 text-white font-medium text-center bg-blue-400 flex flex-wrap items-center justify-evenly h-[800px] md:h-[350px]'
     >
@@ -245,12 +268,52 @@ function Home() {
       </div>
   </div>
 
+<div className='mt-9'>
+  <h1 className='text-center capitalize text-4xl text-[#404040] font-semibold '>parents are saying</h1>
+  <Swiper
+      modules={[Autoplay]}
+      spaceBetween={50}
+      autoplay={{ delay: 2000 }}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      {ratingData.map((data, index) => (
+        <SwiperSlide key={index}>
+          <Rating
+            rating={data.rating}
+            review={data.review}
+            user={data.user}
+            location={data.location}
+            image={data.image}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+</div>
 
   <div className='flex flex-wrap w-full p-10 row'>
     
 
       <div className='md:w-1/2 p-5 text-center col'>
-        <h2 className='pt-10 pb-10 text-4xl font-semibold'>Why Choose Us</h2>
+        <h2 className='pt-10 pb-10 text-4xl  text-[#404040] font-semibold '>Why Choose Us</h2>
         <h1 className='justify-start text-2xl mb-4'>We Are Here to Help Parents Raise Happy and Healthy Children</h1>
         <p className='justify-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div className="max-w-md mx-auto mt-8">
@@ -283,7 +346,17 @@ function Home() {
 
 
   </div>
-  
+
+  <div className='p-10'>
+  <div className='flex flex-col justify-center items-center'>
+    <h1 className=' text-center sm:text-left text-2xl pb-5 text-green-400 mt-1'>Team Member</h1>
+    <h1 className=' text-center sm:text-left text-3xl pb-5 text-[#404040] font-semibold'>Expert Teacher</h1>
+    </div>
+  <Card2/>
+  </div>
+
+
+
 
   </div>
   )

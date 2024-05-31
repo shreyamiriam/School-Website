@@ -1,36 +1,8 @@
-// import React from 'react'
-
-// function Card() {
-//   return (
-//     <>
-//          <div>
-//             <div>
-//                 <img className='h-10 ' src="https://hellokidsmaruthankuzhi.com/images/logo.png" alt="Na"/>
-//             </div>
-//             <div>
-//                 <h1>Mathematics Class</h1>
-//                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor</p>
-//             </div>
-//             <div className='flex'>
-//             <img className='h-5 inline' src="https://picsum.photos/200/300" alt="Na"/>
-//             <p>Mona George</p>
-//             </div>
-//         </div> 
-
-        
-
-
-
-//     </>
-//   )
-// }
-
-// export default Card
 import React from 'react';
 const dummyData = [
   {
     id: 1,
-    imageUrl: 'https://hellokidsmaruthankuzhi.com/images/logo.png',
+    imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Mathematics Class',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
     author: 'Mona George',
@@ -38,15 +10,15 @@ const dummyData = [
   },
   {
     id: 2,
-    imageUrl: 'https://example.com/image2.jpg',
+    imageUrl: 'https://images.pexels.com/photos/6991094/pexels-photo-6991094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Science Class',
     description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     author: 'John Doe',
-    authorImageUrl: 'https://example.com/author2.jpg',
+    authorImageUrl: 'https://picsum.photos/200/300',
   },
   {
     id: 3,
-    imageUrl: 'https://hellokidsmaruthankuzhi.com/images/logo.png',
+    imageUrl: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Mathematics Class',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
     author: 'Mona George',
@@ -54,7 +26,7 @@ const dummyData = [
   },
   {
     id: 4,
-    imageUrl: 'https://hellokidsmaruthankuzhi.com/images/logo.png',
+    imageUrl: 'https://images.pexels.com/photos/5428155/pexels-photo-5428155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'Mathematics Class',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor',
     author: 'Mona George',
@@ -66,6 +38,7 @@ const dummyData = [
 
 function Card() {
   return (
+    <>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {dummyData.map((data) => (
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -78,7 +51,7 @@ function Card() {
           />
         </div>
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6" style={{backgroundColor:"lavender"}}>
           {/* Title */}
           <h1 className="text-xl font-semibold text-gray-800 mb-2">{data.title}</h1>
           {/* Description */}
@@ -96,6 +69,7 @@ function Card() {
       </div>
       ))}
     </div>
+    </>
   );
 }
 
