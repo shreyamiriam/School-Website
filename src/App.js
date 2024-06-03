@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Gallery from "./Pages/Gallery";
 import Newsevents from "./Pages/Newsevents";
 import Rating from "./Components/Rating";
+import Readmore from "./Components/Readmore";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/rating" element={<Rating/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/readmore/:id" element={<Readmore/>}/>
       </Routes>
    <Footer/>
     </>

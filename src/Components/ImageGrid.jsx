@@ -85,9 +85,19 @@ function ImageGrid() {
 
   return (
     <>
-      <div className='flex flex-col justify-center items-center'>
+      {/* <div className='flex flex-col justify-center items-center'>
         <h1 className='text-center sm:text-left text-4xl mt-6 pb-5 text-blue-500 uppercase font-semibold'>Gallery</h1>
-      </div>
+      </div> */}
+       <div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+    <h1 
+    className='text-4xl uppercase mb-2'><b>Gallery</b>
+    </h1>
+  
+    <h1
+    className='text-xl p-3 bg-yellow-500 rounded-full text-white'><b>Home - Gallery</b>
+    </h1>
+    </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-14">
   {dummyData.map((data, index) => (

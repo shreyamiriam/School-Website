@@ -80,7 +80,7 @@ function Footer() {
           <p>Terms & Conditions Privacy Policy</p>
         </div>
         <div>
-          <button className='w-12 h-10 rounded-lg bg-blue-500' style={{marginLeft:"60px"}} onClick={scrollToTop}>
+          <button className='w-12 h-10 rounded-lg bg-blue-500' onClick={scrollToTop}>
           <NavigationOutlinedIcon/>
           </button>
         </div>
