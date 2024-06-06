@@ -2,14 +2,14 @@ import React from 'react';
 const dummyData = [
   {
     id: 1,
-    imageUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVhY2hlcnxlbnwwfHwwfHx8MA%3D%3D',
+    imageUrl: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Ava Farrington',
     description: 'Teacher',
     
   },
   {
     id:2,
-    imageUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVhY2hlcnxlbnwwfHwwfHx8MA%3D%3D',
+    imageUrl: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Ava Farrington',
     description: 'Teacher',
     
@@ -23,7 +23,7 @@ const dummyData = [
   },
   {
     id: 4,
-    imageUrl: 'https://hellokidsmaruthankuzhi.com/images/logo.png',
+    imageUrl: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Lucas Martinez',
     description: 'Teacher',
     
@@ -36,9 +36,9 @@ function Card() {
   return (
     <>
    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
       {dummyData.map((data) => (
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-neutral-400">
         {/* Image */}
         <div className="relative h-56">
           <img

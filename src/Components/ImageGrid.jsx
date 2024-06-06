@@ -88,13 +88,13 @@ function ImageGrid() {
       {/* <div className='flex flex-col justify-center items-center'>
         <h1 className='text-center sm:text-left text-4xl mt-6 pb-5 text-blue-500 uppercase font-semibold'>Gallery</h1>
       </div> */}
-       <div className='flex-col' style={{ backgroundImage: 'url("https://thumbs.dreamstime.com/b/seamless-pattern-abstract-outline-silhouette-human-face-modern-avant-garde-poster-white-grey-background-trendy-144736736.jpg")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
+       <div className='flex-col' style={{ backgroundImage: 'url("https://images.pexels.com/photos/8422104/pexels-photo-8422104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',height:"400px",backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:'center'}}>
     <h1 
-    className='text-4xl uppercase mb-2'><b>Gallery</b>
+    className='text-4xl uppercase mb-2 font-serif'><b>Gallery</b>
     </h1>
   
     <h1
-    className='text-xl p-3 bg-yellow-500 rounded-full text-white'><b>Home - Gallery</b>
+    className='text-xl p-3 bg-yellow-500 rounded-xl text-white'><b>Home - Gallery</b>
     </h1>
     </div>
 
